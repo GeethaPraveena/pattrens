@@ -1,0 +1,21 @@
+#include <stdio.h>
+int main()
+{
+  int i, n,missingnumber,totalsum,currentsum=0;
+  printf("Enter the size of the array : ");
+  scanf("%d", &n);
+  int arr[n - 1];
+  printf("Enter the values : \n");
+  for (i=0;i<n;i++)
+  {
+    scanf("%d", &arr[i]);
+  }
+   totalsum=(n+1)*(n+2)/2;
+  for (i = 0;i<n;i++)
+  {
+    currentsum += arr[i];
+  }
+  missingnumber=totalsum-currentsum;
+  printf("Missing number is: %d\n", missingnumber);
+  return 0;
+}
